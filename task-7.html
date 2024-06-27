@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train Animation</title>
+    <style>
+        #train {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            transition: left 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <img id="train" src="c:\Users\sahit\Desktop\BS JS\train.png" alt="Train" width="200">
+    <h2>Click the following buttons to handle animation</h2>
+    <button onclick="startAnimation()">Start</button>
+    <button onclick="stopAnimation()">Stop</button>
+
+    <script>
+        var train = document.getElementById('train');
+        var animation;
+
+        function startAnimation() {
+            if (!animation) {
+                animation = setInterval(moveTrain, 100);
+            }
+        }
+
+        function stopAnimation() {
+            clearInterval(animation);
+            animation = null;
+        }
+
+        function moveTrain() {
+            var left = parseInt(train.style.left, 10);
+            if (isNaN(left)) {
+                left = 0;
+            }
+            left += 5;
+            train.style.left = left + 'px';
+
+            if (left > window.innerWidth) {
+                train.style.left = '0px';
+            }
+        }
+    </script>
+</body>
+</html>

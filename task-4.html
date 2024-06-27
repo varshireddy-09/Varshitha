@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-4</title>
+    <script>
+        function showDate() {
+            let today = new Date();
+            let date = today.getDate() + '/' + 
+                       today.toLocaleString('default', { month: 'long' }) + '/' + 
+                       today.getFullYear();
+            document.getElementById("dateDisplay").innerHTML = date;
+        }
+
+        function showTime() {
+            let now = new Date();
+            let time = now.toString();
+            document.getElementById("timeDisplay").innerHTML = time;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showDate()">show date</button>
+    <div id="dateDisplay"></div>
+    
+    <button onclick="showTime()">show Time</button>
+    <div id="timeDisplay"></div>
+</body>
+</html>

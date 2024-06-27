@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-2</title>
+</head>
+<body>
+    <h2>Alphabetical order.</h2>
+    <p><b>Given string is</b></p>
+    <p id="emo"></p>
+    <p><b>Alphabetical order is</b></p>
+    <p id="demo"></p>
+    <script>
+        function alphabetizeString(str) {
+    // Split the string into an array of characters
+    let charsArray = str.split('');
+    // Sort the array of characters alphabetically
+    let sortedArray = charsArray.sort();
+    // Join the sorted array back into a string
+    let sortedString = sortedArray.join('');
+    return sortedString;
+}
+
+let exampleString = 'webmaster';
+document.getElementById("emo").innerHTML=exampleString;
+let result = alphabetizeString(exampleString);
+document.getElementById("demo").innerHTML= result;
+    </script>
+</body>
+</html>

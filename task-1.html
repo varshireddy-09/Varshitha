@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-1</title>
+</head>
+<body>
+    <h2>Reversing a number</h2>
+    <p>let the actual number be</p>
+    <p id="emo"></p>
+    <p>Reversing the number we get..</p>
+    <p id="demo"></p>
+    <script>
+        function reverseNumber(num) 
+        {
+        // Convert the number to a string
+        let strNum = num.toString();
+        // Reverse the string
+        let reversedStrNum = strNum.split('').reverse().join('');
+        // Convert the reversed string back to a number
+        let reversedNum = parseInt(reversedStrNum, 10);
+        return reversedNum;
+    }
+    let x = 32243;
+    document.getElementById("emo").innerHTML=x;
+    document.getElementById("demo").innerHTML=reverseNumber(x);
+    </script>
+</body>
+</html>
